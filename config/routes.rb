@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :coders
 
-  root 'coders#index'
+  root 'coders#home'
 
   get 'coders/' => 'coders#index'
 
