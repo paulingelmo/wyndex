@@ -73,6 +73,6 @@ class CodersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def coder_params
-      params.require(:coder).permit(:name, :twitter_handle, :facebook_username, :github_username)
+      params.require(:coder).permit(:name, :cohort, :picture, :twitter_handle, :facebook_username, :github_username)
     end
 end

@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Cohort</th>
       <th>Twitter handle</th>
       <th>Facebook username</th>
       <th>Github username</th>
@@ -17,6 +18,7 @@
     <% @coders.each do |coder| %>
       <tr>
         <td><%= coder.name %></td>
+        <td><%= coder.cohort %></td>
         <td><%= coder.twitter_handle %></td>
         <td><%= coder.facebook_username %></td>
         <td><%= coder.github_username %></td>
