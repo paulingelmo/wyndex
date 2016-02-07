@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
   resources :coders
 
-  # root 'coder#home'
   root 'coders#index'
 
-  get 'index/' => 'coders#index'
+  get 'coders/' => 'coders#index'
 
-  get 'profile/:id' => 'coders#profile'
+  get 'coders/:id' => 'coders#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

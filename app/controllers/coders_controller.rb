@@ -1,9 +1,6 @@
 class CodersController < ApplicationController
   before_action :set_coder, only: [:show, :edit, :update, :destroy]
 
-  def home
-  end
-
   # GET /coders
   # GET /coders.json
   def index
@@ -13,9 +10,6 @@ class CodersController < ApplicationController
   # GET /coders/1
   # GET /coders/1.json
   def show
-  end
-
-  def profile
   end
 
   # GET /coders/new
