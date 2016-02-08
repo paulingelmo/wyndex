@@ -96,7 +96,7 @@ a:hover {
 
 html, body {
   height: 100%;
-  background: url('backgroundimage.jpg') no-repeat center center;
+  background: url('app/assets/images/backgroundimage.jpg') no-repeat center center;
   background-size: cover;
 
 }
