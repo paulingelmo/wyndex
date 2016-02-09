@@ -13,6 +13,7 @@ class CodersController < ApplicationController
 
   def indexalt
     @coders = Coder.all
+  end
 
   # GET /coders/1
   # GET /coders/1.json
