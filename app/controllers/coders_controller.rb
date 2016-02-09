@@ -1,6 +1,9 @@
 class CodersController < ApplicationController
   before_action :set_coder, only: [:show, :edit, :update, :destroy]
 
+  # GET /
+  def home
+  end
 
   # GET /coders
   # GET /coders.json
@@ -10,11 +13,12 @@ class CodersController < ApplicationController
 
   def indexalt
     @coders = Coder.all
-  end
 
   # GET /coders/1
   # GET /coders/1.json
   def show
+    @tweets = $twitter_client.user_timeline("#{@coder.twitter_handle}", count: 5)
+    @slacks = $slack_client.search_messages(query: "from:#{@coder.slack_handle}", count: 5)["messages"]["matches"]
   end
 
   # GET /coders/new
@@ -74,6 +78,6 @@ class CodersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def coder_params
-      params.require(:coder).permit(:name, :cohort, :picture, :twitter_handle, :facebook_username, :github_username)
+      params.require(:coder).permit(:name, :cohort, :picture, :twitter_handle, :slack_handle, :facebook_username, :github_username)
     end
 end

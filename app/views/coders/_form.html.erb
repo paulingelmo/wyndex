@@ -21,7 +21,11 @@
   </div>
   <div class="field">
     <%= f.label :twitter_handle %><br>
-    <%= f.text_field :twitter_handle %>
+    @<%= f.text_field :twitter_handle %>
+  </div>
+  <div class="field">
+    <%= f.label :slack_handle %><br>
+    <%= f.text_field :slack_handle %>
   </div>
   <div class="field">
     <%= f.label :facebook_username %><br>
@@ -31,6 +35,7 @@
     <%= f.label :github_username %><br>
     <%= f.text_field :github_username %>
   </div>
+  <% @coder.picture = "https://twitter.com/#{@coder.twitter_handle}/profile_image?size=original" %>
   <div class="actions">
     <%= f.submit %>
   </div>

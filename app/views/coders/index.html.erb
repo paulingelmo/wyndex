@@ -2,33 +2,17 @@
 
 <h1>Listing Coders</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Cohort</th>
-      <th>Twitter handle</th>
-      <th>Facebook username</th>
-      <th>Github username</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
     <% @coders.each do |coder| %>
-      <tr>
-        <td><%= coder.name %></td>
-        <td><%= coder.cohort %></td>
-        <td><%= coder.twitter_handle %></td>
-        <td><%= coder.facebook_username %></td>
-        <td><%= coder.github_username %></td>
-        <td><%= link_to 'Show', coder %></td>
-        <td><%= link_to 'Edit', edit_coder_path(coder) %></td>
-        <td><%= link_to 'Destroy', coder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+
+      picture.jpg
+      <%= coder.name %>
+      <%= coder.cohort %>
+      <%= link_to 'Show', coder %>
+      <%= link_to 'Edit', edit_coder_path(coder) %>
+      <%= link_to 'Destroy', coder, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+      <br>
     <% end %>
-  </tbody>
-</table>
 
 <br>
 

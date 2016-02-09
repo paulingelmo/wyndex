@@ -2,8 +2,7 @@
 
 <p>
   <strong>Picture:</strong>
-
-  <%= @coder.picture %>
+  <%= image_tag("#{@coder.picture}", size: "200x200") %>
 </p>
 
 <p>
@@ -22,6 +21,11 @@
 </p>
 
 <p>
+  <strong>Slack handle:</strong>
+  <%= @coder.slack_handle %>
+</p>
+
+<p>
   <strong>Facebook username:</strong>
   <%= @coder.facebook_username %>
 </p>
@@ -33,3 +37,6 @@
 
 <%= link_to 'Edit', edit_coder_path(@coder) %> |
 <%= link_to 'Back', coders_path %>
+
+<%= render 'tweets' %>
+<%= render 'slacks' %>
