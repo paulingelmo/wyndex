@@ -14,54 +14,21 @@
  *= require_self
  */
 
-/*.jumbotron {
-  position: relative;
-  background: url('home_jumbotron_backgroundimage2.jpg') no-repeat center center;
-  background-size: cover;
-
-}
-
-.jumbotron > h1 {
-  background-color: none;
-  text-align: center;
-  color: white;
-
-}
-
-.jumbotron > p {
-  background-color: none;
-  text-align: center;
-  color: white;
-}
-
-.jumbotron > span {
-  background: none;
-  border-color: white;
-  border-radius: 6px;
-  font-size: 3em;
-  width: 50%;
-  border-width: 2px;
-  color: white;
-
-}
-
-.btn btn-primary btn-lg btn-block {
-  background-color: black;
-}
-
-
-span:hover {
-    color: #fff;
-    background-color: #286090;
-    border-color: #204d74;
-    color: white;
-}*/
 
 /*
  * Globals
  */
 
 /* Links */
+
+body {
+  background-color: grey;
+}
+
+#profile_pic {
+  
+}
+
 a,
 a:focus,
 a:hover {
@@ -81,11 +48,16 @@ a:hover {
 .btn-group-lg>.btn, .btn-lg {
     background: none;
     padding: 10px 16px;
-    font-size: 20px;
+    font-size: 25px;
     line-height: 2;
     border-radius: 6px;
-    color: white;
+    border-color: white;
     border-width: medium;
+    width: 30%;
+    margin: 0 auto;
+
+
+
 }
 
 a:visited {
@@ -100,14 +72,6 @@ text-decoration: none;
 /*
  * Base structure
  */
-
-
-html, body {
-  height: 100%;
-  background: url(<%= image_path("backgroundimage.jpg") %>) no-repeat center center;
-  background-size: cover;
-
-}
 
 body {
   color: #fff;
@@ -219,7 +183,7 @@ body {
 
 .lead {
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 300;
     line-height: 1.4;
     font-family: "KlinicSlabLight",serif;

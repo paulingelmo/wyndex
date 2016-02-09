@@ -1,13 +1,14 @@
 class CodersController < ApplicationController
   before_action :set_coder, only: [:show, :edit, :update, :destroy]
 
-  # GET /
-  def home
-  end
 
   # GET /coders
   # GET /coders.json
   def index
+    @coders = Coder.all
+  end
+
+  def indexalt
     @coders = Coder.all
   end
 

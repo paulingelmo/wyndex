@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'coders/:id' => 'coders#show'
 
+  get 'index' => 'coders#indexalt'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

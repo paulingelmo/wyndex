@@ -1,0 +1,96 @@
+<iframe id="publishiframe" style="display:none;" src="chrome-extension://jgnbklefkgedfbpjebhjgibfnobjcbli/template/content-script.html"></iframe>
+
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><%= link_to 'Home', root_path %></li>
+            <li role="presentation"><a href="#">About</a></li>
+            <li role="presentation"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- <div class="jumbotron">
+        <h1>Jumbotron heading</h1>
+        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+      </div> -->
+
+      <div class="row marketing">
+        <div id='profile_pic' class="col-lg-4">
+          <p><div class="thumbnail"> <img data-src="holder.js/100%x200" alt="100%x200" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MjAwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTUyYjk1ZjBlZWIgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMnB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTJiOTVmMGVlYiI+PHJlY3Qgd2lkdGg9IjI0MiIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI4OS44NTkzNzUiIHk9IjEwNS4xIj4yNDJ4MjAwPC90ZXh0PjwvZz48L2c+PC9zdmc+" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+             <div class="caption">
+               <h2>Robert Tassy</h2>
+               <h4>Miami | Cohort 8</h4>
+               <p><a href="#" class="btn btn-primary" role="button">Follow</a> <a href="#" class="btn btn-default" role="button">Unfollow</a></p>
+              </div>
+            </div>
+          </p>
+        </div>
+
+
+        <div class="col-lg-8">
+          <h4>Twitter Tweets</h4>
+          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+          <h4>Github Repos</h4>
+          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+
+          <h4>Linkedin Headlines</h4>
+          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+          <h4>Slack Chats</h4>
+          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+          <h4>Facebook Posts</h4>
+          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+
+<div class="notify js-notify">
+    <div class="notify__loader">
+    </div>
+    <div class="notify__icon"></div>
+    <div class="notify__body">
+      <div class="notify__body__message">
+        <span class="js-notify-message">There was an error loading this message</span>
+        <span class="notify__body__actions js-notify-action">
+          <a href="https://web.crowdfireapp.com/#/publish/timeline" target="_blank">
+            Go to Timeline
+          </a>
+        </span>
+      </div>
+      <span class="arrow arrow--small">⤴</span>
+    </div>
+  </div><span id="publishImageBtn" style="display: none; position: absolute; z-index: 8675400; width: 100px; height: 25px; opacity: 0.9; cursor: pointer; border-radius: 4px; background-image: url(&quot;chrome-extension://jgnbklefkgedfbpjebhjgibfnobjcbli/images/publish-image.png&quot;); background-size: 100px 25px;"></span><span id="selectedIcon" style="display: none; position: absolute; z-index: 8675400; width: 40px; height: 40px; cursor: pointer; border-radius: 4px; background-image: url(&quot;chrome-extension://jgnbklefkgedfbpjebhjgibfnobjcbli/images/selected-icon.png&quot;); background-size: cover;"></span><script type="text/javascript">(function () {
+        return window.SIG_EXT = {};
+      })()</script>
+
+
+<p id="notice"><%= notice %></p>
+
+
+    <% @coders.each do |coder| %>
+        <%= coder.name %>
+        <%= coder.cohort %>
+        <%= link_to 'Show', coder %>
+        <%= link_to 'Edit', edit_coder_path(coder) %>
+        <%= link_to 'Destroy', coder, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+
+<br>
+
+<%= link_to 'New Coder', new_coder_path %>
+<br>
