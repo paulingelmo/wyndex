@@ -26,8 +26,9 @@ html, body {
            <h1 class="cover-heading">SOCIAL MEDIA STALKING JUST GOT EASIER</h1>
            <p class="lead">Because staying connected to your network is crucial.</p>
            <p class="lead">
-             <%= button_to 'Learn More', coders_path, :class => 'btn btn-secondary btn-lg btn-block', :method => :get %>
-          </p>
+             <%# button_to 'Learn More', coders_path, :class => 'btn btn-primary btn-lg', :method => :get %>
+             <button type="button" class="btn btn-secondary btn-lg btn-block"><%= link_to 'Learn more', coders_path %></button>
+           </p>
          </div>
 
          <div class="mastfoot">
