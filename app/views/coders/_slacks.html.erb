@@ -1,7 +1,8 @@
 <section id="slacks">
-  <ul>
-    <% @slacks.each do |message| %>
-      <li><%= message["text"] %></li>
-    <% end %>
-  </ul>
+  <% @slacks.each do |message| %>
+    <div class="slack">
+      <p><%= message["text"] %></p>
+    </div>
+    <br>
+  <% end %>
 </section>
