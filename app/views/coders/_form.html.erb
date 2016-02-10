@@ -1,3 +1,6 @@
+<style>
+  div.field{color: lightgrey;}
+</style>
 <%= form_for(@coder) do |f| %>
   <% if @coder.errors.any? %>
     <div id="error_explanation">
@@ -17,11 +20,15 @@
   </div>
   <div class="field">
     <%= f.label :cohort %><br>
-    <%= f.text_field :cohort %>
+    <%= f.select :cohort, 1..10 %>
   </div>
   <div class="field">
     <%= f.label :twitter_handle %><br>
-    <%= f.text_field :twitter_handle %>
+    @<%= f.text_field :twitter_handle %>
+  </div>
+  <div class="field">
+    <%= f.label :slack_handle %><br>
+    <%= f.text_field :slack_handle %>
   </div>
   <div class="field">
     <%= f.label :facebook_username %><br>
@@ -31,7 +38,8 @@
     <%= f.label :github_username %><br>
     <%= f.text_field :github_username %>
   </div>
-  <div class="actions">
+  <% @coder.picture = "https://twitter.com/#{@coder.twitter_handle}/profile_image?size=original" %>
+  <div class="actions" style="color: grey">
     <%= f.submit %>
   </div>
 <% end %>
