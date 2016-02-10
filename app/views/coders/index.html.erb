@@ -12,7 +12,6 @@
             <% coder.picture = "https://twitter.com/#{coder.twitter_handle}/profile_image?size=original" %>
             <%= image_tag("#{coder.picture}", size: "200x200") %>
           </div>
-          <br>
           <%= coder.name %>, C.<%= coder.cohort %>
           <br>
           <%= link_to 'Show', coder %>
