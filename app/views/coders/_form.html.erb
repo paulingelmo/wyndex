@@ -1,5 +1,6 @@
 <style>
-  div.field{color: lightgrey;}
+  div.field{color: white;}
+  div.field{text-shadow: none;}
 </style>
 <%= form_for(@coder) do |f| %>
   <% if @coder.errors.any? %>
@@ -16,31 +17,39 @@
 
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <span id="form_field"><%= f.text_field :name %></span>
   </div>
+  <br>
 
   <div class="field">
     <%= f.label :cohort %><br>
     <%= f.select :cohort, 1..10 %>
   </div>
+  <br>
 
   <div class="field">
     <%= f.label :twitter_handle %><br>
-    @<%= f.text_field :twitter_handle %>
+    @<span id="form_field"><%= f.text_field :twitter_handle %></span>
   </div>
+  <br>
 
   <div class="field">
     <%= f.label :slack_handle %><br>
-    @<%= f.text_field :slack_handle %>
+    @<span id="form_field"><%= f.text_field :slack_handle %></span>
   </div>
+  <br>
+
   <div class="field">
     <%= f.label :facebook_username %><br>
-    <%= f.text_field :facebook_username %>
+    <span id="form_field"><%= f.text_field :facebook_username %></span>
   </div>
+  <br>
+
   <div class="field">
     <%= f.label :github_username %><br>
-    <%= f.text_field :github_username %>
+    <span id="form_field"><%= f.text_field :github_username %></span>
   </div>
+  <br>
 
   <div class="actions" style="color: grey">
     <%= f.submit %>
