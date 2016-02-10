@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= f.label :cohort %><br>
-    <%= f.select :cohort, 1..10 %>
+    <%= f.select :cohort, options_for_select((0..10), selected_key = 8) %>
   </div>
   <br>
 
