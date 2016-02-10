@@ -2,18 +2,20 @@
 
 <h1>Listing Coders</h1>
 
+<div class="row">
+  <div class="col-md-4">
     <% @coders.each do |coder| %>
-
-      picture.jpg
-      <%= coder.name %>
-      <%= coder.cohort %>
-      <%= link_to 'Show', coder %>
-      <%= link_to 'Edit', edit_coder_path(coder) %>
-      <%= link_to 'Destroy', coder, method: :delete, data: { confirm: 'Are you sure?' } %>
-
+    <br>
+    picture.jpg
+    <%= coder.name %>
+    <%= coder.cohort %>
+    <%= link_to 'Show', coder %>
+    <%= link_to 'Edit', edit_coder_path(coder) %>
+    <%= link_to 'Destroy', coder, method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
-
-<br>
+    <br>
+  </div>
+</div>
 
 <%= link_to 'New Coder', new_coder_path %>
 <br>
