@@ -18,14 +18,17 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
+
   <div class="field">
     <%= f.label :cohort %><br>
     <%= f.select :cohort, 1..10 %>
   </div>
+
   <div class="field">
     <%= f.label :twitter_handle %><br>
     @<%= f.text_field :twitter_handle %>
   </div>
+
   <div class="field">
     <%= f.label :slack_handle %><br>
     <%= f.text_field :slack_handle %>

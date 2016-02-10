@@ -1,13 +1,15 @@
+
+
 <iframe id="publishiframe" style="display:none;" src="chrome-extension://jgnbklefkgedfbpjebhjgibfnobjcbli/template/content-script.html"></iframe>
+
 
     <div class="container">
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
             <li role="presentation" class="active"><%= link_to 'Home', root_path %></li>
-            <li role="presentation"><%= link_to 'Back To Network', coders_path %></li>
-            <li role="presentation"><%= link_to 'Edit This Connection', edit_coder_path(@coder) %> </li>
-
+            <li role="presentation" class="active"><%= link_to 'Back To Network', coders_path %></li>
+            <li role="presentation" class="active"><%= link_to 'Edit Connection', edit_coder_path(@coder) %> </li>
 
 
           </ul>
@@ -21,14 +23,14 @@
       </div> -->
 
       <div class="row marketing">
-        <p id="notice"><%= notice %></p>
+        <p class="bg-success"><%= notice %></p>
         <div id='profile_pic' class="col-lg-3">
           <p><div class="thumbnail">
+            <h2><%= @coder.name %></h2>
             <%= image_tag("#{@coder.picture}", size: "200x200") %>
              <div class="caption">
-               <h2><%= @coder.name %></h2>
+               <h4>Wyncode Academy</h4>
                <h4>Miami | Cohort <%= @coder.cohort %></h4>
-
                <p>
                  <strong>Twitter:</strong>
                  <%= @coder.twitter_handle %>
@@ -55,8 +57,8 @@
         </div>
 
 
-        <div class="col-lg-6">
-          <h1>Twitter Tweets</h1>
+        <div class="col-lg-4">
+          <h1>Tweets</h1>
           <p class="tweets"><%= render 'tweets' %></p>
         </div>
 
@@ -66,10 +68,19 @@
           <!-- <h4>Linkedin Headlines</h4>
           <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p> -->
 
-          <div class="col-lg-6">
-          <h1>Slack Chats</h1>
-          <p class="slacks"><%= render 'slacks' %></p>
-        </div>
+          <div id='slack' class="col-lg-3">
+            <h1>Slacks</h1>
+            <p class="slacks"><%= render 'slacks' %></p>
+          </div>
+
+          <div class="col-lg-1">
+            <ul>
+              <li><%= image_tag("Twitter_logo_blue.png", width: "70") %><%= @coder.twitter_handle %></li>
+              <li><%= image_tag("slack_logo.png", width: "80") %><%= @coder.slack_handle %></li>
+              <li><%= image_tag("Facebook_logo_blue.png", width: "70") %><%= @coder.facebook_username %></li>
+              <li><%= image_tag("Github_logo_black.png", width: "70") %><%= @coder.github_username %></li>
+            </ul>
+          </div>
 
           <!-- <h4>Facebook Posts</h4>
           <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p> -->
