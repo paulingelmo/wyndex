@@ -6,6 +6,11 @@
 li {
   list-style-type: none;
 }
+div#show {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 div.index_pic img {
   border: 2px solid whitesmoke;
   border-radius: 5%;

@@ -21,9 +21,9 @@
         <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
         <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
       </div> -->
-
-      <div class="row marketing">
-        <p class="bg-success"><%= notice %></p>
+      <!-- <p class="bg-success"><%= notice %></p> -->
+      <div id="show" >
+        <!-- class="row marketing" -->
         <div id='profile_pic' class="col-lg-3">
           <p><div class="thumbnail">
             <h2><%= @coder.name %></h2>
@@ -32,22 +32,26 @@
                <h4>Wyncode Academy</h4>
                <h4>Miami | Cohort <%= @coder.cohort %></h4>
                <p>
-                 <strong>Twitter:</strong>
-                 <%= @coder.twitter_handle %>
+                 <!-- <strong>Twitter:</strong> -->
+                 <i class="fa fa-twitter fa-lg"></i>
+                 @<%= @coder.twitter_handle %></a>
                </p>
 
                <p>
-                 <strong>Slack:</strong>
-                 <%= @coder.slack_handle %>
+                 <!-- <strong>Slack:</strong> -->
+                 <i class="fa fa-slack fa-lg"></i>
+                 @<%= @coder.slack_handle %></a>
                </p>
 
                <p>
-                 <strong>Facebook:</strong>
+                 <!-- <strong>Facebook:</strong> -->
+                 <i class="fa fa-facebook fa-lg"></i>
                  <%= @coder.facebook_username %>
                </p>
 
                <p>
-                 <strong>Github:</strong>
+                 <!-- <strong>Github:</strong> -->
+                 <i class="fa fa-github fa-lg"></i>
                  <%= @coder.github_username %>
                </p>
 
@@ -73,14 +77,14 @@
             <p class="slacks"><%= render 'slacks' %></p>
           </div>
 
-          <div class="col-lg-1">
+          <!-- <div class="col-lg-1">
             <ul>
-              <li><%= image_tag("Twitter_logo_blue.png", width: "70") %><%= @coder.twitter_handle %></li>
-              <li><%= image_tag("slack_logo.png", width: "80") %><%= @coder.slack_handle %></li>
-              <li><%= image_tag("Facebook_logo_blue.png", width: "70") %><%= @coder.facebook_username %></li>
-              <li><%= image_tag("Github_logo_black.png", width: "70") %><%= @coder.github_username %></li>
+              <li><%#= image_tag("Twitter_logo_blue.png", width: "70") %><%= @coder.twitter_handle %></li>
+              <li><%#= image_tag("slack_logo.png", width: "80") %><%= @coder.slack_handle %></li>
+              <li><%#= image_tag("Facebook_logo_blue.png", width: "70") %><%= @coder.facebook_username %></li>
+              <li><%#= image_tag("Github_logo_black.png", width: "70") %><%= @coder.github_username %></li>
             </ul>
-          </div>
+          </div> -->
 
           <!-- <h4>Facebook Posts</h4>
           <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p> -->

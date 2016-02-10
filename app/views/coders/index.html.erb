@@ -7,18 +7,21 @@
     <div class="flexing">
       <% @coders.each do |coder| %>
       <!-- replace below with the ruby code for images -->
+        <br>
+        <br>
         <div>
           <div class="index_pic">
             <% coder.picture = "https://twitter.com/#{coder.twitter_handle}/profile_image?size=original" %>
             <%= image_tag("#{coder.picture}", size: "200x200") %>
           </div>
           <br>
-          <%= coder.name %>, C.<%= coder.cohort %>
+          <%= coder.name %>, C<%= coder.cohort %>
           <br>
           <%= link_to 'Show', coder %>
           <%= link_to 'Edit', edit_coder_path(coder) %>
           <%= link_to 'Destroy', coder, method: :delete, data: { confirm: 'Are you sure?' } %>
         </div>
+        <br>
         <br>
       <% end %>
     </div>
