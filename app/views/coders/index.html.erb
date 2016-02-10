@@ -7,6 +7,8 @@
     <div class="flexing">
       <% @coders.each do |coder| %>
       <!-- replace below with the ruby code for images -->
+        <br>
+        <br>
         <div>
           <br>
           <br>
@@ -14,7 +16,8 @@
             <% coder.picture = "https://twitter.com/#{coder.twitter_handle}/profile_image?size=original" %>
             <%= image_tag("#{coder.picture}", size: "200x200") %>
           </div>
-          <%= coder.name %>, C.<%= coder.cohort %>
+          <br>
+          <p id="index_text"><%= coder.name %>, C<%= coder.cohort %></p>
           <br>
           <%= link_to 'Show', coder, class:"btn btn-primary btn-sm" %>
           <%= link_to 'Edit', edit_coder_path(coder), class:"btn btn-info btn-sm" %>
