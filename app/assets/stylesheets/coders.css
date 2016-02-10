@@ -6,6 +6,9 @@
 li {
   list-style-type: none;
 }
+p#index_text {
+  margin: 5px;
+}
 div#show {
   display: flex;
   flex-wrap: wrap;
