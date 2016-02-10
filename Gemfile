@@ -29,6 +29,7 @@ gem 'nokogiri'
 gem 'octokit'
 gem 'twitter'
 gem 'slack-api'
+gem 'linkedin'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

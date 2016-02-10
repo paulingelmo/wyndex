@@ -6,9 +6,18 @@
 li {
   list-style-type: none;
 }
-.thumbnail img {
+div.index_pic img {
   border: 2px solid whitesmoke;
   border-radius: 5%;
+}
+div.thumbnail img {
+  border: 2px solid whitesmoke;
+  border-radius: 5%;
+}
+div.flexing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 div.tweet {
   display: inline-block;
