@@ -3,21 +3,26 @@
 <h1>Your Network</h1>
 
 <div class="row">
-  <div class="col-lg-*">
+  <div class="col-md-*">
     <% @coders.each do |coder| %>
 
     <!-- replace below with the ruby code for images -->
-    <img src="backgroundimage2" class="img-thumbnail" alt="Responsive image">
-    <%= coder.name %>
-    <%= coder.cohort %>
+    <div>
+      <% coder.picture = "https://twitter.com/#{coder.twitter_handle}/profile_image?size=original" %>
+    <%= image_tag("#{coder.picture}", size: "200x200") %>
+    <br>
+    <%= coder.name %>, C.<%= coder.cohort %>
+    <br>
     <%= link_to 'Show', coder %>
     <%= link_to 'Edit', edit_coder_path(coder) %>
     <%= link_to 'Destroy', coder, method: :delete, data: { confirm: 'Are you sure?' } %>
-
+  <br>
+</div>
     <% end %>
   </div>
 </div>
-
+<br>
+<br>
 <%= link_to 'Add Connection', new_coder_path %>
 <br>
 <%= link_to 'Go Home', root_path %>
