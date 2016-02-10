@@ -10,8 +10,8 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
+
+
  */
 
 
@@ -20,6 +20,7 @@
  */
 
 /* Links */
+
 
 
 
@@ -44,27 +45,25 @@ a:hover {
 .btn-default,
 .btn-default:hover,
 .btn-default:focus {
-  color: black;
+  color: #333;
   text-shadow: none; /* Prevent inheritence from `body` */
   background-color: #fff;
   border: 1px solid #fff;
 }
 
 .btn.focus, .btn:focus, .btn:hover {
-  color: black;
+  color: white;
   text-decoration: none;
-  opacity: 0.5;
 }
 
 .btn-group-lg>.btn, .btn-lg {
-    color: darkgray;
-    background: white;
+    background: none;
     padding: 10px 16px;
     font-size: 25px;
     line-height: 2;
     border-radius: 6px;
-    /*border-color: white;
-    border-width: medium;*/
+    border-color: white;
+    border-width: medium;
     width: 30%;
     margin: 0 auto;
 
