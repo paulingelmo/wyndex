@@ -6,7 +6,7 @@
 li {
   list-style-type: none;
 }
-img {
+.thumbnail img {
   border: 2px solid whitesmoke;
   border-radius: 5%;
 }

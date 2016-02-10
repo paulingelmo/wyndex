@@ -1,20 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Coders</h1>
+<h1>Your Network</h1>
 
     <% @coders.each do |coder| %>
 
       picture.jpg
       <%= coder.name %>
       <%= coder.cohort %>
-      <%= link_to 'Show', coder %>
+      <%= link_to 'Visit Profile', coder %>
       <%= link_to 'Edit', edit_coder_path(coder) %>
-      <%= link_to 'Destroy', coder, method: :delete, data: { confirm: 'Are you sure?' } %>
-
+      <%= link_to 'Remove', coder, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <br/>
     <% end %>
 
 <br>
 
-<%= link_to 'New Coder', new_coder_path %>
+<%= link_to 'Add Connection', new_coder_path %>
 <br>
 <%= link_to 'Go Home', root_path %>
