@@ -19,8 +19,8 @@ class CodersController < ApplicationController
   # GET /coders/1.json
   def show
     @coder.picture = "https://twitter.com/#{@coder.twitter_handle}/profile_image?size=original"
-    @tweets = $twitter_client.user_timeline("#{@coder.twitter_handle}", count: 5)
-    @slacks = $slack_client.search_messages(query: "from:#{@coder.slack_handle}", count: 5)["messages"]["matches"]
+    @tweets = $twitter_client.user_timeline("#{@coder.twitter_handle}", count: 15)
+    @slacks = $slack_client.search_messages(query: "from:#{@coder.slack_handle}", count: 15)["messages"]["matches"]
   end
 
   # GET /coders/new
